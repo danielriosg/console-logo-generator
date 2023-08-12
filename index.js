@@ -66,7 +66,9 @@ function generateSVG(userInput) {
 }
 
 // Main function to run the application
+const path = require("path");
 async function run() {
+const outputPath = path.join(__dirname, "examples", "logo.svg");
   try {
     const userInput = await promptUser();
     const svg = generateSVG(userInput);
